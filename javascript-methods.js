@@ -29,9 +29,26 @@ Array.prototype.mySome = function(callbackFn) {
 };
 
 // EVERY //
+// Tests if all elements in the array pass the test implemented by the provided function. Returns a boolean.
 Array.prototype.myEvery = function(callbackFn) {
-  // Place your code here.
+  for (let i = 0; i < this.length; i++){
+    if (callbackFn(this[i]))
+    return true;
+  
+    else{
+      return false;
+    }
+  }
+  
 };
+
+//const isBelowThreshold = (currentValue) => currentValue < 95;
+
+//const array1 = [1, 30, 39, 29, 95, 90];
+
+//console.log(array1.every(isBelowThreshold)); //native method
+
+//console.log(array1.myEvery(isBelowThreshold)); //my method 
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
