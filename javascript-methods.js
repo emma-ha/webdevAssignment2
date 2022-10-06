@@ -15,8 +15,13 @@ Array.prototype.myMap = function(callbackFn) {
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+  let resultArray = new Array();
+  for (let i = 0; i < this.length; i++)
+    if(callbackFn(this[i]))
+  resultArray[resultArray.length++] = this[i];
+  return resultArray
 };
+
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
