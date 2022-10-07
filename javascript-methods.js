@@ -32,15 +32,20 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  for (let i =0; i < this.length; i++){
-    if (callbackFn(this[i]))
-      return true;
-      
-    else
-      return false;
-      
-  }
+  let bool = true 
 
+  for(let i = 0; i < this.length; i++)
+  {
+      if(!(callbackFn(this[i])))
+      {
+          bool = false
+      }
+      else
+      {
+          continue
+      }
+  }
+  return bool
 };
 
 //const array = [1, 2, 3, 4, 5];
