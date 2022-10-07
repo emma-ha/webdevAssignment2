@@ -71,12 +71,44 @@ Array.prototype.myEvery = function(callbackFn) {
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+  let red = 0
+  j = this.length
+
+  for(let i = 0; i <= this.length; i++)
+  {
+      red = callbackFn(red, this[i])
+      if(i == j)
+      {
+        return red 
+      }
+  }
 };
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
- 
+  t = true
+if(!(loc))
+{
+      for(let i = 0; i < this.length; i++)
+    {
+        if(this[i] == value) 
+        {
+          return t
+        }
+    }
+    return false
+}
+else
+{
+    for(let i = loc; i < this.length; i++)
+    {
+        if(this[i] == value)
+        {
+          return t
+        }
+    }
+    return false
+}
 
 };
 
