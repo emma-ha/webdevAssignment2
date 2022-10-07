@@ -131,8 +131,8 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 Object.myKeys = function(object) {
  let arr = [];
 
-  for (keys in object){
-      newArray.push(keys)
+  for (let i in object){
+      newArray.push(i)
   }
 
   return arr;
@@ -143,21 +143,12 @@ Object.myKeys = function(object) {
 
 // VALUES //
 Object.myValues = function(object) {
-    let newArray = [];
-    for (values in object){
-      newArray.push(object[values])
+  let newArray = [];
+  
+    for (let i in object){
+      newArray.push(object[i]);
     }
     return newArray;
 };
 
-//const array1 = ['a', 'b', 'c'];
-//const iterator = array1.myValues();
-
-//for (const value of iterator) {
-//  console.log(value);
-//}
-
-// expected output: "a"
-// expected output: "b"
-// expected output: "c"
 
