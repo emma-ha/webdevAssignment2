@@ -129,26 +129,24 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 
 // KEYS //
 Object.myKeys = function(object) {
- let arr = [];
+ let newArray = [];
 
   for (let i in object){
-      newArray.push(i)
+
   }
-
-  return arr;
-
+  return newArray;
 };
 
 
 
 // VALUES //
 Object.myValues = function(object) {
-  let newArray = [];
-  
+
     for (let i in object){
       newArray.push(object[i]);
     }
     return newArray;
 };
+
 
 
