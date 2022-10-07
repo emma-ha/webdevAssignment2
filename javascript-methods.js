@@ -102,24 +102,44 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 
 // KEYS //
 Object.myKeys = function(object) {
-  // Place your code here.
+ let arr = [];
+
+  for (keys in object){
+      newArray.push(keys)
+  }
+
+  return arr;
+
 };
+
+const array= ['a', 'b', 'c'];
+const iterator = array.myKeys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// expected output: 0
+// expected output: 1
+// expected output: 2
+
+
 
 // VALUES //
 Object.myValues = function(object) {
-    newArray = []
+    let newArray = [];
     for (values in object){
-      newArray.push(object[this.values])
+      newArray.push(object[values])
     }
     return newArray;
 };
 
-const array1 = ['a', 'b', 'c'];
-const iterator = array1.myValues();
+//const array1 = ['a', 'b', 'c'];
+//const iterator = array1.myValues();
 
-for (const value of iterator) {
-  console.log(value);
-}
+//for (const value of iterator) {
+//  console.log(value);
+//}
 
 // expected output: "a"
 // expected output: "b"
