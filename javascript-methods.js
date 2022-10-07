@@ -132,7 +132,7 @@ Object.myKeys = function(object) {
  let newArray = [];
 
   for (let i in object){
-      newArray.push(i);
+
   }
   return newArray;
 };
@@ -141,7 +141,7 @@ Object.myKeys = function(object) {
 
 // VALUES //
 Object.myValues = function(object) {
-    let newArray = [];
+
     for (let i in object){
       newArray.push(object[i]);
     }
