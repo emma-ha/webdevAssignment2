@@ -25,8 +25,26 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  // Place your code here.
+  for (let i =0; i < this.length; i++){
+    if (callbackFn(this[i]))
+      return true;
+      
+    else
+      return false;
+      
+      
+  }
+
 };
+
+//const array = [1, 2, 3, 4, 5];
+
+// checks whether an element is even
+//const even = (element) => element % 2 === 0;
+
+//console.log(array.some(even));
+//console.log(array.mySome(even));
+// expected output: true
 
 // EVERY //
 // Tests if all elements in the array pass the test implemented by the provided function. Returns a boolean.
@@ -35,9 +53,9 @@ Array.prototype.myEvery = function(callbackFn) {
     if (callbackFn(this[i]))
     return true;
   
-    else{
+    else
       return false;
-    }
+    
   }
   
 };
