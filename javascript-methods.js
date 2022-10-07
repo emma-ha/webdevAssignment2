@@ -81,8 +81,10 @@ Array.prototype.myReduce = function(callbackFn) {
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-  // Place your code here.
+ 
+
 };
+
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
@@ -91,8 +93,12 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  // Place your code here.
+  
+  
 };
+
+
+
 
 // KEYS //
 Object.myKeys = function(object) {
@@ -101,5 +107,21 @@ Object.myKeys = function(object) {
 
 // VALUES //
 Object.myValues = function(object) {
-  // Place your code here.
+    newArray = []
+    for (values in object){
+      newArray.push(object[this.values])
+    }
+    return newArray;
 };
+
+const array1 = ['a', 'b', 'c'];
+const iterator = array1.myValues();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"
+
