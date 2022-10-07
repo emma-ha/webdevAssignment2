@@ -48,36 +48,26 @@ Array.prototype.mySome = function(callbackFn) {
   return bool
 };
 
-//const array = [1, 2, 3, 4, 5];
-
-// checks whether an element is even
-//const even = (element) => element % 2 === 0;
-
-//console.log(array.some(even));
-//console.log(array.mySome(even));
-// expected output: true
 
 // EVERY //
 // Tests if all elements in the array pass the test implemented by the provided function. Returns a boolean.
 Array.prototype.myEvery = function(callbackFn) {
-  for (let i = 0; i < this.length; i++){
-    if (callbackFn(this[i]))
-    return true;
-  
-    else
-      return false;
-    
+  let bool = true
+
+  for(let i = 0; i < this.length; i++)
+  {
+      if(!callbackFn(this[i])) 
+      {
+        bool = true
+      }
+        else
+      {
+        continue
+      }
   }
-  
+  return bool
 };
 
-//const isBelowThreshold = (currentValue) => currentValue < 95;
-
-//const array1 = [1, 30, 39, 29, 95, 90];
-
-//console.log(array1.every(isBelowThreshold)); //native method
-
-//console.log(array1.myEvery(isBelowThreshold)); //my method 
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
@@ -116,17 +106,6 @@ Object.myKeys = function(object) {
   return arr;
 
 };
-
-const array= ['a', 'b', 'c'];
-const iterator = array.myKeys();
-
-for (const key of iterator) {
-  console.log(key);
-}
-
-// expected output: 0
-// expected output: 1
-// expected output: 2
 
 
 
